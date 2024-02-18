@@ -86,7 +86,8 @@ def login():
                     }
                     token = jwt.encode(payload)
             except Exception as e:
-                error = str(e)
+                print(e)
+                error = 'Unalbe to login with gven credential!'
             else:
                 response = make_response(redirect(url_for('todos.todo_list')))
                 response.set_cookie('auth_token', token)
