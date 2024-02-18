@@ -7,9 +7,8 @@
 Docker
 
 # Database Setup:
-
-From root of the app, run <docker compose up>
-Create a database <todos> from docker terminal
+## From root of the app, run <docker compose up>
+## Create a database <todos> from docker terminal
 
 # Application Setup:
 
