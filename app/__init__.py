@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, redirect, url_for
 
 
 def create_app(config=None):
@@ -17,7 +17,7 @@ def create_app(config=None):
 
     @app.route('/')
     def hello():
-        return 'Hello World'
+        return redirect(url_for('auth.login'))
 
     with app.app_context():
         from . import db
